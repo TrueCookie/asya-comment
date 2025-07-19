@@ -30,5 +30,5 @@ if posts:
     # Вводим текст комментария
     page.fill("//div[contains(@class, 'post') and starts-with(@id, 'post-216822404_')]//div[contains(@class, 'reply_field') and contains(@class, 'submit_post_field')]", 'Меркулова Анастасия, 301 пед')  # Замените селектор на актуальный для текстового поля комментария
     
-    page.wait_for_selector("//button[contains(@class, 'reply_send_button')]", timeout=5000)
-    page.click("//button[contains(@class, 'reply_send_button')]")  # Замените селектор на актуальный для кнопки отправки комментария
+    page.wait_for_selector("//div[contains(@class, 'post') and starts-with(@id, 'post-216822404_')]//button[contains(@class, 'reply_send_button')]", timeout=5000)
+    page.click("//div[contains(@class, 'post') and starts-with(@id, 'post-216822404_')]//button[contains(@class, 'reply_send_button')]")  # Замените селектор на актуальный для кнопки отправки комментария
